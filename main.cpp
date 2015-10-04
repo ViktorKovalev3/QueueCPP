@@ -12,6 +12,6 @@ int main()
     cout << myQueue.dequeue() << endl;
     cout << myQueue.dequeue() << endl;
     cout << myQueue.dequeue() << endl;
-    cout << myQueue.dequeue() << endl;
+    cout << myQueue.dequeue() << endl; //Error, because queue is empty
     return 0;
 }

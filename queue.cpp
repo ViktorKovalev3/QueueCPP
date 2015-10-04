@@ -26,9 +26,9 @@ int Queue::dequeue(void){
         return 1;
     }
     int tmpVal = first->value;
-    QueueItem *tmpPointerToFirst = first; // записываем адрес головы
-    first=first->nextAdr;             // изменяем адрес головы
-    delete tmpPointerToFirst;                 // Delete old First Item
+    QueueItem *tmpPointerToFirst = first; // Need for delete old First Queue Item
+    first = first->nextAdr;               // Change new adress for First
+    delete tmpPointerToFirst;             // Delete old First Item
     size--;
 
     return tmpVal;
