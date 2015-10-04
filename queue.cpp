@@ -1,12 +1,11 @@
 #include "queue.h"
 
-Queue::Queue()
+Queue::Queue(int initiatingItem)
 {
     first = new (QueueItem);
-    last  = first;           //Because first item
+    last  = first;           //Because one item
     first->value = initiatingItem;
 }
 
-Queue::enqueue(){
-
+void Queue::enqueue(){
 }

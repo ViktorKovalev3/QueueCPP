@@ -7,9 +7,9 @@ class Queue
 private:
     struct QueueItem{
         int value;
-        QueueItem *next;
+        QueueItem *prevAdr;
     };
-    QueueItem* first, last;
+    QueueItem *first, *last;
 
 public:
     Queue(int initiatingItem);
