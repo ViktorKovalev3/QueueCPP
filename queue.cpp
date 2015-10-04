@@ -8,5 +8,11 @@ Queue::Queue(int initiatingItem)
     first->value = initiatingItem;
 }
 
-void Queue::enqueue(){
+void Queue::enqueue(int value){
+    QueueItem *newTmpLast = new(QueueItem);
+    newTmpLast->prevAdr = 0;
+    newTmpLast->value   = value;
+
+    last->prevAdr = newTmpLast;
+    last = newTmpLast;
 }

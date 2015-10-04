@@ -13,8 +13,8 @@ private:
 
 public:
     Queue(int initiatingItem);
-    void enqueue();  //Add last item to end
-    void dequeue();  //Request first item and del
+    void enqueue(int value);  //Add new last item to end
+    void dequeue(void        );  //Request first item and del
 };
 
 #endif // QUEUE_H
