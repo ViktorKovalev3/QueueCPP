@@ -33,3 +33,7 @@ int Queue::dequeue(void){
 
     return tmpVal;
 }
+
+int Queue::getSize(void){
+    return size;
+}
