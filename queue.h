@@ -2,9 +2,9 @@
 #define QUEUE_H
 #include <iostream>  //cerr stream
 #include <stdlib.h>  //abort()
-template <typename T>
 
 /*---------------------------------------------------------*/
+template <typename T>
 class Queue
 {
 private:
