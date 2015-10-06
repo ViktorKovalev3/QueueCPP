@@ -1,2 +1,2 @@
 all:
-	g++ main.cpp -o QueueCppDemo
+	g++ main.cpp -O3 -o QueueCppDemo

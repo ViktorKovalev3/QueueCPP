@@ -1,7 +1,7 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 #include <iostream>  //cerr stream
-#include <stdlib.h>  //abort()
+#include <stdlib.h>  //exit(1)
 
 /*---------------------------------------------------------*/
 template <typename T>
@@ -37,10 +37,15 @@ Queue<T>::Queue(const T & initiatingItem)
 template<typename T>
 Queue<T>::~Queue()
 {
+    while(first != 0){
+        QueueItem *tmpP = first;
+        first = first->nextAdr;
+        size--;
+        delete tmpP;
+    }
+    size = 0;
     first = 0;
-    last = 0;
     delete first;
-    delete last;
 }
 
 template <typename T>
@@ -57,8 +62,8 @@ void Queue<T>::enqueue(T value){
 template <typename T>
 T Queue<T>::dequeue(void){
     if(size == 0){
-        std::cerr << "!!\t dequeue Empty Queue \t!! \n";
-        abort();
+        std::cerr << "!!\t Dequeue Empty Queue \t!! \n";
+        exit(1);
     }
     T tmpVal = first->value;
     QueueItem *tmpPointerToFirst = first; // Need for delete old First Queue Item
